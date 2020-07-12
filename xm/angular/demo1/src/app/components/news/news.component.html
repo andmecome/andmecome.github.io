@@ -1,0 +1,69 @@
+<p>news works!</p>
+
+<!-- 绑定数据 -->
+<p>{{ msg }} </p>
+
+<!-- 动态绑定属性 -->
+<p [title]="title">{{ student }}</p>
+
+<!-- html -->
+<span [innerHTML]="content" class="red"></span>
+
+<!-- 引入图片 -->
+<img src="assets/1.png" alt="" style="width: 200px; height: 100px;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img [src]="url" alt="">
+
+<!-- 循环 -->
+<ul>
+  <li *ngFor="let item of arr">
+    {{ item }}
+  </li>
+</ul>
+
+<!-- 循环数据，显示索引 -->
+<ul>
+  <li *ngFor="let item of arr; let key=index">
+    {{ key }}---{{ item }}
+  </li>
+</ul>
+
+<!-- 判断 -->
+<div *ngIf="flag">true</div>
+<div *ngIf="!flag">false</div>
+
+<!-- 判断 -->
+*<span [ngSwitch]="orderStatus">
+<p *ngSwitchCase="1">
+  yizhifu
+</p>
+<p *ngSwitchCase="2">
+  queren
+</p>
+<p *ngSwitchDefault>
+  yifahuo
+</p>
+</span>
+
+<!-- [ngClass] [ngStyle] -->
+<div [ngClass]="{'red': flag}">
+  ngClass
+</div>
+<div [ngStyle]="{'color': 'red'}">
+  ngStyle
+</div>
+
+<!-- 方法 -->
+<button (click)="run()">获取</button>
+
+<!-- 表单事件，事件对象 -->
+<input type="text" (keyup)="keyup($event)"> <br>
+
+<!-- 双向数据绑定，只针对表单 -->
+<input type="text" [(ngModel)]="msg">{{ msg }}
+
+<!-- Angular 中的 dom 操作（ViewChild） -->
+<!-- 1.操作dom 2.获取子组件的实例 -->
+<div #myBox>
+  domjiedian
+</div>
