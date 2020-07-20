@@ -23,3 +23,14 @@ getTestBed().initTestEnvironment(
 const context = require.context('./', true, /\.spec\.ts$/);
 // And load the modules.
 context.keys().map(context);
+
+
+/**
+ * https://pkg.go.dev/
+ * go mod init 项目名 //初始化依赖
+ * 
+ * go get 包地址 //安装包
+ * 
+ * go mod download //安装包
+ * go mod vendor //将依赖复制到当前项目的vendor下 
+ */

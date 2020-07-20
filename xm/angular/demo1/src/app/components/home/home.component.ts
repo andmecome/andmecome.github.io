@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-//引入并配置服务
+//引入服务
 import { StorageService } from '../../services/storage.service';
 
 /**
